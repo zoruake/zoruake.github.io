@@ -5,11 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div id="bodyin"></div>
+    <div id="nome">
+        SITE DO DANIEL 🐐
+    </div>
     <header>
-        A
+        <select id="opcao" onchange="redirecionar()">
+            <option value="">
+                ESCOLHA UMA ATIVIDADE
+            </option>
+            <option value="https://zoruake.github.io/tarefa1/">
+                ATIVIDADE 1
+            </option>
+        </select>
     </header>
+    <script>
+        function redirecionar() {
+        let opcao = document.getElementById("opcao").value;
+        if (opcao) {
+            window.location.href = opcao;
+        }
+    }
+    </script>
 </body>
 </html>
