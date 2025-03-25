@@ -28,8 +28,27 @@ header {
     font-family: 'Poppins', sans-serif;
 }
 
-
 body {
   margin: 0px;
 }
+
+#opcao {
+  position: absolute;
+  top: 0%; 
+  left: 0%;
+  width: 1100px;
+  height: auto;
+  font-size: 50px;
+  background-color: rgb(53, 1, 102);
+}
+
+.tamanhoimagem {
+  position: absolute;
+  width: 100px;
+  height: auto;
+  left: 94%;
+  top: 0%;
+}
+
+
 
