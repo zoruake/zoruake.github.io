@@ -19,14 +19,13 @@ header{
 #logo{
     position: absolute;
     border-radius: 50px;
-    width:125px;
+    width:120px;
     left: 10px;
 }
 
 #titulo{
-    font-family: Arial, Helvetica, sans-serif;
     margin: 0px;
-    font-size: 60px;
+    font-size: 80px;
     position: absolute;
     bottom: 0px;
     color: #ff00dd;
@@ -34,7 +33,6 @@ header{
 }
 
 #nome{
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 50px;
     margin-top: 30px;
     text-align: center;
@@ -47,15 +45,15 @@ header{
 }
 
 .menu-botoes{
-    margin-top: 30px;
+    margin-top: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .botao{
-    width: 384px;
-    height: 216px;
+    width: 390px;
+    height: 230px;
     background-color: #000000;
     border: 1px solid #000000;
     border-right: 5px solid #000000;
@@ -68,34 +66,34 @@ header{
 }
 
 .botao:hover{
-    width: 387px;
-    height: 218px;
+    width: 390px;
+    height: 220px;
     opacity: 50%;
 }
 
 #icone{
     width: 100%;
     height: 100%;
-    border-radius : 15px;
+    border-radius : 20px;
     object-fit: cover;
+}
+
+#rodape{
+    position: relative;
+    font-size: 30px;
+    color:#ff00dd;
+    text-shadow: 5px 5px 3px #000000;
+    padding-bottom: 15px;
 }
 
 footer{
     position: absolute;
     bottom: 0px;
     width: 100%;
-    height: 50px;
+    height: 70px;
     background: linear-gradient(to right, #0f0f0f, #5b0475);
     display:flex;
     align-items: center;
     justify-content: center;
 }
 
-#rodape{
-    font-family: Arial, Helvetica, sans-serif;
-    position: relative;
-    font-size: 20px;
-    color:#ff00dd;
-    text-shadow: 5px 5px 3px #000000;
-    padding-bottom: 15px;
-}
