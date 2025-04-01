@@ -22,7 +22,8 @@ header {
     top: 50%; 
     left: 20%;
     transform: translate(-50%, -50%); 
-    color: rgb(53, 1, 102);
+    color: #ff00dd;
+    text-shadow: 10px 10px 5px #3700ff;
     font-size: 50px; 
     font-weight: bold;
     font-family: 'Poppins', sans-serif;
