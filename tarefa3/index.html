@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memória de Bode</title>
+    <link rel = "stylesheet" href = "index.css">
+    <link rel="icon" href="pngwing.com.png">
+</head>
+<body>
+    <header id = "topo">
+        <img id = "logo"src = "pngwing.com.png" Alt = "GENGAR">
+        <h1 id = "titulo">MEMORY BODE GAME</h1>
+    </header>
+
+    <h2 id = "nome">A</h2>
+
+    <div class = "menu-botoes">
+        <div class = "botao"
+             onmouseover = "mudarNomeMostrarNome('FUTEBOL MEMORY GAME')"
+             onmouseout = "esconderNome()"
+             onclick = "abrirJogo('FUTEBOL')">
+
+            <img id = "icone" src = "neymar.png" Alt = "Imagem do Neymar">
+        </div>
+
+        <div class = "botao"
+             onmouseover = "mudarNomeMostrarNome('ANIME MEMORY GAME')"
+             onmouseout = "esconderNome()"
+             onclick = "abrirJogo('ANIME')">
+
+            <img id = "icone" src = "sololeveling.png" Alt = "Imagem de Anime">
+        </div>
+
+        <div class = "botao"
+        onmouseover = "mudarNomeMostrarNome('SERIES MEMORY GAME')"
+        onmouseout = "esconderNome()"
+        onclick = "abrirJogo('SERIES')">
+
+            <img id = "icone" src = "prisionbreak.png" Alt = "Imagem de Serie">
+        </div>
+    </div>
+
+    <footer>
+        <h3 id = "rodape">Desenvolvimento: DANIEL O BODE</h3>
+    </footer>
+
+    <script>
+
+    function mudarNomeMostrarNome(nome){
+        const novo_nome = document.getElementById('nome');
+        novo_nome.innerText = nome;
+        novo_nome.style.visibility = 'visible';
+    }
+
+    function esconderNome(){
+        const nome = document.getElementById('nome');
+        nome.style.visibility = 'hidden';
+    }
+
+    function abrirJogo(tema){
+        localStorage.setItem("tema-escolhido", tema);
+        window.location.href = "https://zoruake.github.io/atividade3/game.html";
+    }
+
+    </script>
+    
+
+</body>
+</html>
