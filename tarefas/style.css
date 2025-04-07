@@ -1,0 +1,138 @@
+body {
+    display: grid;
+    grid-template-columns: 400px 1fr 0px;
+    grid-template-rows: 100px 780px 53px;
+    grid-template-areas: 
+        'header header header'
+        'nav main main'
+        'footer footer footer';
+        background: linear-gradient(to right, #0f0f0f, #c300ff);
+  }
+  
+  main {
+    grid-area: main;
+    background-color: #39003d;
+  }
+  
+  header {
+    grid-area: header;
+    background: linear-gradient(to right, #0f0f0f, #c300ff);
+  }
+  
+  nav {
+    grid-area: nav;
+    background-color: #39003d;
+  }
+  
+  footer {
+    grid-area: footer;
+    background-color: #0f0f0f;
+  }
+  
+  #rodape {
+      text-align: center;
+      color: #fff;
+      font-family: Arial, sans-serif;
+  }
+  
+    #nome {
+      position: absolute;
+      top: 5%; 
+      left: 50%;
+      transform: translate(-50%, -50%); 
+      color: #ff00dd;
+      text-shadow: 10px 10px 5px #3700ff;
+      font-size: 50px; 
+      font-weight: bold;
+      font-family: 'Poppins', sans-serif;
+  }
+  
+  body {
+    margin: 0px;
+  }
+  
+  .tamanhoimagem {
+    position: absolute;
+    width: 100px;
+    height: auto;
+    left: 94%;
+    top: 0%;
+  }
+  
+  .menu-toggle {
+    font-size: 40px;
+    cursor: pointer;
+    color: white;
+    padding: 10px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 1001;
+  }
+  
+  .menu-lateral {
+    position: fixed;
+    top: 0;
+    left: -250px; 
+    width: 250px;
+    height: 100%;
+    background-color: #000000;
+    transition: left 0.3s ease;
+    z-index: 1000;
+  }
+  
+  .menu-lateral ul {
+    margin-top: 80px; 
+  }
+  
+  .menu-lateral li {
+    border-bottom: 1px solid #ffffff33;
+  }
+  
+  .menu-lateral a {
+    display: block;
+    padding: 20px;
+    color: white;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .menu-lateral a:hover {
+    background-color: #9e00fa;
+  }
+  
+  .menu-aberto {
+    left: 0 !important; 
+  }
+
+  .menu-links {
+    display: flex;
+    flex-direction: column; 
+    gap: 20px;
+    padding: 20px;
+    font-size: 24px;
+  }
+  
+  .menu-links a {
+    text-decoration: none;
+    color: white;
+    background-color: #440158;
+    padding: 15px;
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+    transition: background 0.3s ease;
+    text-align: center;
+  }
+  
+  .menu-links a:hover {
+    background-color: #c300ff;
+    color: black;
+  }
+  
+  
+  
+  
+  
+  
+  
+  

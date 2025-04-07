@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,35 +9,47 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="icon" href="pngwing.com.png">
 </head>
+
 <body>
-    <div id="bodyin"></div>
-    <div id="nome">
-        SITE DO DANIEL 🐐
-    </div>
     <header>
+        <div id="nome">
+            <p>SITE DO DANIEL 🐐</p>
+        </div>
         <img src="pngwing.com.png" class="tamanhoimagem" alt="GENGAR">
-        <select id="opcao" onchange="redirecionar()">
-            <option value="">
-                ESCOLHA UMA ATIVIDADE:
-            </option>
-            <option value="https://zoruake.github.io/tarefa1/">
-                ATIVIDADE 1
-            </option>
-            <option value="https://zoruake.github.io/tarefa2/">
-                ATIVIDADE 2
-            </option>
-            <option value="https://zoruake.github.io/tarefa3/">
-                ATIVIDADE 3
-            </option>
-        </select>
     </header>
+<div class="menu-toggle" onclick="abrirMenu()">
+    ☰
+  </div>
+  
+  <nav id="menuLateral" class="menu-lateral">
+    <ul>
+      <li><a href="#https://zoruake.github.io/home">🏠 Início</a></li>
+      <li><a href="#https://zoruake.github.io/tarefas">📖 TAREFAS</a></li>
+    </ul>
+  </nav>
+
+    <main>
+        <img src="satoru.gif" class="tamanhogif" alt="SATORU GOJO">
+        <div class="descricao">
+            <h2>Sobre Mim</h2>
+            <p>Me chamo <strong>Daniel</strong>, tenho <strong>16 anos</strong><br>e <strong>AMO LANA DEL REY</strong>
+                com todo meu coração!</p>
+        </div>
+    </main>
+    <nav>
+        
+    </nav>
+    <footer>
+        <div id="rodape">
+            <p>© Todos os direitos reservados pelo Bode</p </div>
+    </footer>
     <script>
-        function redirecionar() {
-        let opcao = document.getElementById("opcao").value;
-        if (opcao) {
-            window.location.href = opcao;
+        function abrirMenu() {
+          const menu = document.getElementById("menuLateral");
+          menu.classList.toggle("menu-aberto");
         }
-    }
-    </script>
+      </script>
+      
 </body>
+
 </html>
