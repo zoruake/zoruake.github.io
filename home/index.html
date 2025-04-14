@@ -2,25 +2,32 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>SITE DO BODE</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="icon" href="pngwing.com.png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>SITE DO BODE</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="icon" href="pngwing.com.png">
 </head>
 
 <body>
-    <header>
-        <div id="nome">
-            <p>SITE DO DANIEL 🐐</p>
-        </div>
-        <img src="pngwing.com.png" class="tamanhoimagem" alt="GENGAR">
-    </header>
-<div class="menu-toggle" onclick="abrirMenu()">
+  <header>
+    <div id="nome">
+      <p id="digitando"></p>
+    </div>
+    <img src="pngwing.com.png" class="tamanhoimagem" alt="GENGAR">
+    <audio id="musica" autoplay loop>
+      <source src="musica.mp3" type="audio/mp3">
+      Seu navegador não suporta o elemento de áudio.
+    </audio>
+
+  </header>
+
+  <div class="menu-toggle" onclick="abrirMenu()">
     ☰
   </div>
-  
+
   <nav id="menuLateral" class="menu-lateral">
     <ul>
       <li><a href="https://zoruake.github.io/home">🏠 INÍCIO</a></li>
@@ -28,28 +35,73 @@
     </ul>
   </nav>
 
-    <main>
-        <img src="satoru.gif" class="tamanhogif" alt="SATORU GOJO">
-        <div class="descricao">
-            <h2>Sobre Mim</h2>
-            <p>Me chamo <strong>Daniel</strong>, tenho <strong>16 anos</strong><br>e <strong>AMO CRISTIANO RONALDO</strong>
-                com todo meu coração!</p>
-        </div>
-    </main>
-    <nav>
-        
-    </nav>
-    <footer>
-        <div id="rodape">
-            <p>© Todos os direitos reservados pelo Bode</p </div>
-    </footer>
-    <script>
-        function abrirMenu() {
-          const menu = document.getElementById("menuLateral");
-          menu.classList.toggle("menu-aberto");
-        }
-      </script>
-      
+  <nav class="nav-links">
+    <h3>🚀 Minhas Redes</h3>
+    <ul>
+      <li><a href="https://github.com/zoruake" target="_blank"><i class="fab fa-github"></i> GitHub</a></li>
+      <li><a href="https://discord.com/users/1133132558499053609" target="_blank"><i class="fab fa-discord"></i>
+          Discord</a></li>
+      <li><a href="https://www.tiktok.com/@danielgoti_" target="_blank"><i class="fab fa-tiktok"></i> TikTok</a></li>
+      <li><a href="https://open.spotify.com/user/31ynmjghgarha4e777bkk567xsg4?si=590349f950d04770" target="_blank"><i
+            class="fab fa-spotify"></i> Spotify</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <img src="satoru.gif" class="tamanhogif" alt="SATORU GOJO">
+    <div class="descricao">
+      <h2>Sobre Mim</h2>
+      <p>Me chamo <strong>Daniel</strong>, tenho <strong>16 anos</strong><br>e <strong>AMO CRISTIANO RONALDO</strong>
+        com todo meu coração!</p>
+    </div>
+  </main>
+
+  <footer>
+    <div id="rodape">
+      <p>© Todos os direitos reservados pelo Bode</p>
+    </div>
+  </footer>
+
+  <div id="particles"></div>
+
+  <script>
+    function abrirMenu() {
+      const menu = document.getElementById("menuLateral");
+      menu.classList.toggle("menu-aberto");
+    }
+
+    document.addEventListener('mousemove', e => {
+      createParticle(e.clientX, e.clientY);
+    });
+
+    function createParticle(x, y) {
+      const particle = document.createElement('div');
+      particle.className = 'particle';
+      particle.style.left = `${x}px`;
+      particle.style.top = `${y}px`;
+      document.getElementById('particles').appendChild(particle);
+
+      setTimeout(() => {
+        particle.remove();
+      }, 800);
+    }
+
+    const texto = "SITE DO DANIEL 🐐";
+    let i = 0;
+
+    function escrever() {
+      if (i < texto.length) {
+        document.getElementById("digitando").innerHTML += texto.charAt(i);
+        i++;
+        setTimeout(escrever, 150);
+      }
+    }
+    escrever();
+
+    const musica = document.getElementById('musica');
+    musica.volume = 0.4;  
+  </script>
 </body>
+
 
 </html>

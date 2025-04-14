@@ -13,10 +13,11 @@
 <body>
     <header>
         <div id="nome">
-            <p>TAREFAS DO DANIEL 🐐</p>
+            <p id="digitando"></p>
         </div>
         <img src="pngwing.com.png" class="tamanhoimagem" alt="GENGAR">
     </header>
+
     <div class="menu-toggle" onclick="abrirMenu()">
         ☰
     </div>
@@ -50,6 +51,8 @@
         </div>
     </footer>
 
+    <div id="particles"></div>
+
     <script>
         function abrirMenu() {
             const menu = document.getElementById("menuLateral");
@@ -65,7 +68,35 @@
 
         setInterval(atualizarRelogio, 1000);
         atualizarRelogio();
-    </script>
 
+        document.addEventListener('mousemove', e => {
+            createParticle(e.clientX, e.clientY);
+        });
+
+        function createParticle(x, y) {
+            const particle = document.createElement('div');
+            particle.className = 'particle';
+            particle.style.left = `${x}px`;
+            particle.style.top = `${y}px`;
+            document.getElementById('particles').appendChild(particle);
+            setTimeout(() => {
+                particle.remove();
+            }, 800);
+        }
+
+        const texto = "TAREFAS DO DANIEL 🐐";
+        let i = 0;
+
+        function escrever() {
+            if (i < texto.length) {
+                document.getElementById("digitando").innerHTML += texto.charAt(i);
+                i++;
+                setTimeout(escrever, 150); 
+            }
+        }
+        escrever();
+
+    </script>
 </body>
+
 </html>
