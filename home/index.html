@@ -12,16 +12,23 @@
 </head>
 
 <body>
+
+  <div id="popup" class="popup">
+    <div class="popup-conteudo">
+      <h2>Bem-vindo ao site do Bode!</h2>
+      <button onclick="fecharPopup()">Prosseguir</button>
+    </div>
+  </div>
+
+  <audio id="musica" loop>
+    <source src="musica.mp3" type="audio/mp3">
+  </audio>
+
   <header>
     <div id="nome">
       <p id="digitando"></p>
     </div>
     <img src="pngwing.com.png" class="tamanhoimagem" alt="GENGAR">
-    <audio id="musica" autoplay loop>
-      <source src="musica.mp3" type="audio/mp3">
-      Seu navegador não suporta o elemento de áudio.
-    </audio>
-
   </header>
 
   <div class="menu-toggle" onclick="abrirMenu()">
@@ -98,8 +105,12 @@
     }
     escrever();
 
-    const musica = document.getElementById('musica');
-    musica.volume = 0.4;  
+    function fecharPopup() {
+      document.getElementById('popup').style.display = 'none';
+      const musica = document.getElementById('musica');
+      musica.volume = 0.2;
+      musica.play();
+    }
   </script>
 </body>
 

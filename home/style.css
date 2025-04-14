@@ -228,6 +228,73 @@ footer {
   }
 }
 
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  animation: popit 2s ease;
+}
+
+.popup-conteudo {
+  background: #320f34;
+  color: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0px 0px 15px 5px rgba(255, 0, 221, 0.5);
+  animation: popupFadeIn 1s ease;
+}
+
+.popup-conteudo h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.popup-conteudo button {
+  padding: 10px 20px;
+  background: #ff00dd;
+  border: none;
+  color: white;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.popup-conteudo button:hover {
+  background: #ff00aa;
+}
+
+@keyframes popit {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes popupFadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+
 @media (max-width: 800px) {
   body {
     grid-template-columns: 1fr;
