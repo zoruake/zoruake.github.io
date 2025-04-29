@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="pngwing.com.png">
+    <title>Flexbox Simulator</title>
+</head>
+
+
+<body>
+    <nav class="flex-container">
+        
+        <div class="divzero">
+            <h1 style="font-size: 30px;">SIMULADOR</h1>
+            <h1 style="font-size: 25px;">Flexbox</h1>
+        </div>
+
+
+        <div class="divum">
+            <p style="font-size: 20px;"><strong> Preenchimento</strong></p>
+            <a href="#" onclick="clickColor(0)">
+                <div id="quadradinho1" class="color-option" style="background-color: violet;"></div>
+            </a>
+            <a href="#" onclick="clickColor(1)">
+                <div id="quadradinho2" class="color-option" style="background-color: lightsalmon;"></div>
+            </a>
+            <a href="#" onclick="clickColor(2)">
+                <div id="quadradinho3" class="color-option" style="background-color: lightblue;"></div>
+            </a>
+            <a href="#" onclick="clickColor(3)">
+                <div id="quadradinho4" class="color-option" style="background-color: lightyellow;"></div>
+            </a>
+            <a href="#" onclick="clickColor(4)">
+                <div id="quadradinho5" class="color-option" style="background-color: orange;"></div>
+            </a>
+            <a href="#" onclick="clickColor(5)">
+                <div id="quadradinho6" class="color-option" style="background-color: lightgreen;"></div>
+            </a>
+            
+        </div>
+
+
+        <div class="divdois">
+            <p style="font-size: 20px;"><strong> Formato</strong></p>
+            <a href="#" onclick="clickFormat(0)">
+                <div id="formato1"></div>
+            </a>
+            <a href="#" onclick="clickFormat(1)">
+                <div id="formato2"></div>
+            </a>
+        </div>
+
+        <div class="divtres">
+            <p style="font-size: 20px;"><strong> Tamanho</strong></p>
+            <input class="caixatexto" type="text" onkeydown="verificarTamanho(event)">
+        </div>
+
+        <div class="divquatro">
+            <p style="font-size: 20px;"><strong> Alinhamento</strong></p>
+            <select class="caixaselecao" name="flex-direction" id="flex-direction">
+                <option value="">FLEX-DIRECTION</option>
+                <option value="row">row</option>
+                <option value="row-reverse">row-reverse</option>
+                <option value="column">column</option>
+                <option value="column-reverse">column-reverse</option>
+            </select>
+            
+            <select class="caixaselecao" name="justify-content" id="justify-content">
+                <option value="">JUSTIFY-CONTENT</option>
+                <option value="center">center</option>
+                <option value="flex-start">flex-start</option>
+                <option value="flex-end">flex-end</option>
+                <option value="space-around">space-around</option>
+                <option value="space-between">space-between</option>
+            </select>
+            
+            <select class="caixaselecao" name="align-items" id="align-items">
+                <option value="">ALIGN-ITEMS</option>
+                <option value="center">center</option>
+                <option value="flex-start">flex-start</option>
+                <option value="flex-end">flex-end</option>
+                <option value="stretch">stretch</option>
+                <option value="baseline">baseline</option>
+            </select>
+            
+        </div>
+    </nav>
+
+    <main>
+        <div id="divmainum" class="divmainum">1</div>
+        <div id="divmaindois" class="divmaindois">2</div>
+        <div id="divmaintres" class="divmaintres">3</div>
+    </main>
+    
+
+</body>
+<script src="./script.js"></script>
+</html>
