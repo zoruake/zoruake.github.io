@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Space Invaders</title>
+</head>
+<body>
+    <main>
+      
+        <div class="stats">
+            <div class="statsleft">
+                <img class="statsimg" src="images/clock.png" alt="Relógio">
+                <img class="statsimg" src="images/nave.png" alt="Nave">
+                <img class="statsimg" src="images/alien.png" alt="Alien">
+            </div>
+            
+            <div class="statsright">
+                <span><div id="timer">00:00:00</div></span>
+                <span>LIFE: 3</span>
+                <span>ALIEN: 0</span>
+            </div>
+        </div>
+
+        <div id="player">
+            <span id="rocketLeft" class="rocketObj"><img class="rocket" src="images/missil.png" alt=""></span>
+            <img class="playerimg" src="images/nave.png" alt="Nave do jogador">
+            <span id="rocketRight" class="rocketObj"><img class="rocket" src="images/missil.png" alt=""></span>
+        </div>
+
+        <div id="pausedMessage">GAME PAUSED</div>
+    </main>
+
+    <script src="./script.js"></script>
+</body>
+</html>
