@@ -5,7 +5,7 @@ html, body {
 
 body {
     display: flex;
-    background-image: url(images/background.png);
+    background-image: url(images/background1.png);
     object-fit: cover;
 }
 
@@ -69,15 +69,16 @@ main {
     position: absolute;
     bottom: 0px;
     transition: bottom 0.05s linear;
-    z-index: 5;
 }
 
 #rocketLeft {
     left: 30%;
+    z-index: 10;
 }
 
 #rocketRight {
     left: 70%;
+    z-index: 10;
 }
 
 .playerimg {
@@ -99,4 +100,91 @@ main {
     padding: 20px;
     border-radius: 10px;
     z-index: 10;
+}
+
+
+#nextRoundMessage {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 36px;
+    font-weight: bold;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 10;
+}
+
+
+#lostMessage {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 36px;
+    font-weight: bold;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 10;
+}
+
+#gameOverMessage {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 36px;
+    font-weight: bold;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 10;
+}
+
+#alien1 {
+    position: absolute;
+    left: 30%;
+    transform: translateX(-30%);
+    z-index: 5;
+}
+
+#alien2 {
+    
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5;
+
+}
+
+#alien3 {
+    
+    position: absolute;
+    left: 70%;
+    transform: translateX(-70%);
+    z-index: 5;
+
+}
+
+
+
+.aliens {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+}
+
+#rocketLeft, #rocketRight {
+    position: absolute;
+    bottom: 0;
+    transition: none;
+    display: block; /* Garante visibilidade */
 }

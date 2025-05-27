@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,19 +20,30 @@
             
             <div class="statsright">
                 <span><div id="timer">00:00:00</div></span>
-                <span>LIFE: 3</span>
-                <span>ALIEN: 0</span>
+                <div id="lifeCount">LIFE: </div>
+                <div id="alienCount">ALIEN: 0</div>
             </div>
         </div>
 
+        
+        <img id="alien1" class="aliens" src="images/alien.png" alt="">
+        <img id="alien2" class="aliens" src="images/alien.png" alt="">
+        <img id="alien3" class="aliens" src="images/alien.png" alt="">
+
+
+
+
         <div id="player">
-            <span id="rocketLeft" class="rocketObj"><img class="rocket" src="images/missil.png" alt=""></span>
+            <div id="rocketLeft" class="rocketObj"><img class="rocket" src="images/missil.png" alt=""></div>
             <img class="playerimg" src="images/nave.png" alt="Nave do jogador">
-            <span id="rocketRight" class="rocketObj"><img class="rocket" src="images/missil.png" alt=""></span>
+            <div id="rocketRight" class="rocketObj"><img class="rocket" src="images/missil.png" alt=""></div>
         </div>
 
         <div id="pausedMessage">GAME PAUSED</div>
-    </main>
+        <div id="lostMessage">ROUND LOST</div>
+        <div id="gameOverMessage">GAME OVER</div>
+        <div id="nextRoundMessage">YOU WON</div>
+        </main>
 
     <script src="./script.js"></script>
 </body>
