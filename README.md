@@ -1,5 +1,6 @@
 <!-- Neymar em tela cheia -->
-<img src="https://makeagif.com/gif/neymar-training-slow-motion-4k-free-clip-for-edit-Wwtdlu" width="100%" alt="Neymar GIF em alta" />
+<img src="https://media.giphy.com/media/3o6vY1YSKihrPBOnVS/giphy.gif
+" width="100px" alt="Neymar GIF em alta" />
 
 ## 🐐 Sobre o Projeto
 
